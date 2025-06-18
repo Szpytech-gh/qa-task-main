@@ -7,7 +7,16 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:headed:chrome": "playwright test --headed --project='chromium' --workers=1",
+    "test:headed:chrome:core": "playwright test core-functionality.spec.ts --headed --project='chromium' --workers=1",
+    "test:headed:mobile:chrome": "playwright test --headed --project='Mobile Chrome' --workers=1",
+    "test:ui": "playwright test --ui",
+    "test:debug": "playwright test --debug",
+    "test:core": "playwright test tests/core-functionality.spec.ts",
+    "test:report": "playwright show-report"
   },
   "dependencies": {
     "react": "^18.3.1",
@@ -15,6 +24,8 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.17.0",
+    "@playwright/test": "^1.53.1",
+    "@types/node": "^24.0.3",
     "@types/react": "^18.3.17",
     "@types/react-dom": "^18.3.5",
     "@vitejs/plugin-react": "^4.3.4",
