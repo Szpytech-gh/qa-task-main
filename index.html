@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tic-Tac-Toe</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #2b2d30;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+
+    .game {
+      display: flex;
+      gap: 20px;
+    }
+
+    .game-board {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .status {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+
+    .board-row {
+      display: flex;
+    }
+
+    .square {
+      width: 60px;
+      height: 60px;
+      font-size: 1.5rem;
+      font-weight: bold;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 2px solid #333;
+      background-color: #fff;
+      cursor: pointer;
+      color: #1a1a1a;
+      margin: -1px; /* Prevent gaps between squares */
+    }
+
+    .square:hover {
+      background-color: #e6e6e6;
+    }
+
+    .game-info {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      padding-left: 24px;
+    }
+
+    .game-info ol {
+      padding-left: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .game-info button {
+      padding: 5px 10px;
+      font-size: 1rem;
+      cursor: pointer;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+    }
+
+    .game-info button:hover {
+      background-color: #0056b3;
+    }
+
+    .reset-wrapper {
+      margin-top: 16px;
+    }
+  </style>
+</head>
+<body>
+<div id="root"></div>
+<script type="module" src="./src/main.tsx"></script>
+</body>
+</html>
