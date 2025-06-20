@@ -14,10 +14,11 @@ test.describe('Layout and Accessibility', () => {
       // Focus should be manageable with keyboard
       await gamePage.squares.nth(0).focus();
       await expect(gamePage.squares.nth(0)).toBeFocused();
+      await gamePage.page.keyboard.press('Enter');
       
       // Tab navigation through squares
       await gamePage.page.keyboard.press('Tab');
-      // Note: Exact tab behavior depends on implementation
+      await expect(gamePage.squares.nth(1)).toBeFocused();
       
       // Reset button should be keyboard accessible
       await gamePage.resetButton.focus();
